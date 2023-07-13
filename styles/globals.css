@@ -1,0 +1,258 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+:root {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: rgba(0, 0, 0, 1);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #157f45;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #19791e;
+}
+
+body {
+    background-color: #f5f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+/* .carousel_background { */
+    /* background-image: linear-gradient(to right top,
+            #8aa2d3,
+            #67aad4,
+            #17b2d3,
+            #00b8be,
+            #00ba9e,
+            #43bf8d,
+            #68c37c,
+            #89c66b,
+            #a8d171,
+            #c6db7a,
+            #e3e585,
+            #ffef93);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+        .carousel_background  {
+            /* background: linear-gradient(244deg, #382c2c, #b08e3a, #9bb436, #2abf49, #0a4330, #036084, #b6a7cb, #ef31e7, #120b11, #e8ea25, #0a0a0a);
+            background-size: 2200% 2200%;
+        
+            -webkit-animation: AnimationName 38s ease infinite;
+            -moz-animation: AnimationName 38s ease infinite;
+            animation: AnimationName 38s ease infinite; */
+            background-image: url("/bgtest2.jpeg");
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+        
+        @-webkit-keyframes AnimationName {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+        @-moz-keyframes AnimationName {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+        @keyframes AnimationName {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+            
+        }
+/* } */
+
+.product_card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+/* PRODUCT DETAILS CAROUSEL STYLING CUSTOMIZATION START */
+.productCarousel.carousel-root {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+}
+
+.productCarousel.carousel-root .carousel {
+    width: auto;
+}
+
+.productCarousel.carousel-root .carousel.carousel-slider {
+    width: 100%;
+}
+
+.productCarousel.carousel-root .carousel.carousel-slider .slider-wrapper {
+    border-radius: 10px;
+}
+
+.productCarousel.carousel-root .carousel .thumbs-wrapper {
+    margin: 0;
+}
+
+.productCarousel.carousel-root .carousel .thumb {
+    height: 60px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.productCarousel.carousel-root .carousel .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.productCarousel.carousel-root .carousel .thumb:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+}
+
+.productCarousel.carousel-root .carousel .thumb.selected,
+.productCarousel.carousel-root .carousel .thumb:hover {
+    border: 0;
+}
+
+.productCarousel.carousel-root .carousel .thumb:hover:after,
+.productCarousel.carousel-root .carousel .thumb.selected:after {
+    opacity: 0.2;
+}
+
+.productCarousel .control-arrow {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .productCarousel.carousel-root {
+        flex-direction: column;
+    }
+
+    .productCarousel.carousel-root .carousel .thumb {
+        border: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .productCarousel.carousel-root .carousel .thumbs {
+        transform: none !important;
+        flex-direction: column;
+        display: flex;
+        gap: 10px;
+    }
+
+    .productCarousel.carousel-root .carousel .thumb {
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+    
+
+}
+@media screen and (max-width: 768px){
+    
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #157f45;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #19791e;
+}
+.video-responsive iframe {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    width: 100%;
+    
+    position: relative;
+  }
+
+}
+
+
+/* PRODUCT DETAILS CAROUSEL STYLING CUSTOMIZATION END */
+
+.markdown ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: disc;
+    margin: 20px 0;
+}
+
+.markdown ul li {
+    margin: 10px 0;
+}
+
+.carousel .thumbs {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+  
+  .video-responsive iframe {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    
+    position: relative;
+  }
